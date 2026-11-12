@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Anon Chat – Trò chuyện ẩn danh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="chat-container">
+    <header>
+      <div id="title-row">
+        <h1>💬 Anon Chat</h1>
+        <span id="online-count" title="Số người đang online">👥 0</span>
+      </div>
+      <div id="header-row">
+        <p id="status">Đang tìm người lạ...</p>
+        <div id="header-actions">
+          <button id="report-btn" title="Báo cáo người lạ" class="header-btn">🚩 Báo cáo</button>
+          <button id="next-btn" title="Tìm người lạ khác" class="header-btn primary">Tiếp theo ⏭</button>
+        </div>
+      </div>
+    </header>
+
+    <div id="messages"></div>
+
+    <form id="chat-form">
+      <input type="text" id="msg-input" placeholder="Nhập tin nhắn..." autocomplete="off" maxlength="500" disabled>
+      <button type="submit" id="send-btn" disabled>Gửi</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
